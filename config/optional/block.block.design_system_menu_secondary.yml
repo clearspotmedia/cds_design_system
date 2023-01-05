@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.cds_design_system
+  module:
+    - block_class
+    - group_content_menu
+    - node
+  theme:
+    - localgov_design_system
+third_party_settings:
+  block_class:
+    classes: ds-menu__secondary
+id: design_system_menu_secondary
+theme: localgov_design_system
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'group_content_menu:cds_design_system'
+settings:
+  id: 'group_content_menu:cds_design_system'
+  label: 'Design and content guidelines secondary menu'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@domain_group.domain_group_context:group'
+  level: 2
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      cds_design_system: cds_design_system

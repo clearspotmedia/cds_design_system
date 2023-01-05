@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - cds_design_system
+    parent: 'design-system:'
+name: 'Design and content guidelines'
+type: cds_design_system
+description: 'Content type for documenting the Design system (AKA the Style guide)'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

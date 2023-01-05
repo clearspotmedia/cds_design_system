@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cds_design_system_text_section
+label: 'Text section'
+icon_uuid: null
+icon_default: null
+description: 'A text block with heading and body.'
+behavior_plugins: {  }

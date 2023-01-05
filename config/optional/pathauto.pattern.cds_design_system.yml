@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: cds_design_system
+label: 'Design and content guidelines'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:title]'
+selection_criteria:
+  e5e7230f-9f07-4108-b829-34cd3a139cfd:
+    id: node_type
+    bundles:
+      cds_design_system: cds_design_system
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e5e7230f-9f07-4108-b829-34cd3a139cfd
+selection_logic: and
+weight: -5
+relationships: {  }

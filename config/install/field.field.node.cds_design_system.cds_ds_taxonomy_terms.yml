@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.cds_ds_taxonomy_terms
+    - node.type.cds_design_system
+    - taxonomy.vocabulary.cds_design_system_platforms
+id: node.cds_design_system.cds_ds_taxonomy_terms
+field_name: cds_ds_taxonomy_terms
+entity_type: node
+bundle: cds_design_system
+label: 'Taxonomy terms'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cds_design_system_platforms: cds_design_system_platforms
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

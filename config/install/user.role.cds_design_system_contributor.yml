@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.cds_raw_html
+    - node.type.cds_design_system
+  module:
+    - filter
+    - node
+id: cds_design_system_contributor
+label: 'Design system contributor'
+weight: 5
+is_admin: null
+permissions:
+  - 'create cds_design_system content'
+  - 'delete own cds_design_system content'
+  - 'edit any cds_design_system content'
+  - 'edit own cds_design_system content'
+  - 'revert cds_design_system revisions'
+  - 'use text format cds_raw_html'
+  - 'view cds_design_system revisions'

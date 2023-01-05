@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.cds_design_system
+  module:
+    - block_class
+    - group_content_menu
+    - node
+  theme:
+    - localgov_design_system
+third_party_settings:
+  block_class:
+    classes: ds-menu__primary
+id: design_system_menu_primary
+theme: localgov_design_system
+region: full_menu
+weight: 0
+provider: null
+plugin: 'group_content_menu:cds_design_system'
+settings:
+  id: 'group_content_menu:cds_design_system'
+  label: 'Design and content guidelines primary menu'
+  label_display: '0'
+  provider: group_content_menu
+  context_mapping:
+    group: '@domain_group.domain_group_context:group'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {}

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Design system platforms'
+vid: cds_design_system_platforms
+description: 'Platforms where the Design system is in use.'
+weight: 0

@@ -1,0 +1,102 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ *
+ * Various hook implementations.
+ */
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_theme().
+ *
+ * - Template override for menu__group_menu__cds_design_system.
+ * - Template override for paragraph__cds_design_system_text_section.
+ */
+function cds_design_system_theme() {
+
+  return [
+    'menu__group_menu__cds_design_system' => [
+      'base hook' => 'menu',
+    ],
+    'paragraph__cds_design_system_text_section' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_menu() for hook_preprocess_menu__group_menu__cds_design_system().
+ *
+ * Insert unique Ids for the Design system menus.  Menus do not come with the Id
+ * attribute.  But we need these Ids for the Bootstrap 4 hamburger menu control.
+ *
+ * Only applies when the group_content_menu module is available.
+ *
+ * @see https://getbootstrap.com/docs/4.0/components/navbar/#toggler
+ */
+function cds_design_system_preprocess_menu__group_menu__cds_design_system(&$variables) {
+
+  $has_id = isset($variables['attributes']['id']);
+  if ($has_id) {
+    return;
+  }
+
+  $has_unknown_menu_name = empty($variables['menu_name']);
+  if ($has_unknown_menu_name) {
+    return;
+  }
+
+  $variables['attributes']['id'] = Html::getUniqueId($variables['menu_name']);
+  $variables['attributes']['class'][] = 'menu--cds-design-system';
+}
+
+/**
+ * Implements hook_theme_suggestions_hook_alter() for hook_theme_suggestions_page_alter().
+ *
+ * Adds template suggestion for the Design system content type.
+ */
+function cds_design_system_theme_suggestions_page_alter(array &$suggestions, array $vars) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  $is_node = $node;
+  if (!$is_node) {
+    return;
+  }
+
+  $is_design_system_page = ($node->bundle() === 'cds_design_system');
+  if ($is_design_system_page) {
+    $suggestions[] = 'page__cds_design_system';
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph() for hook_preprocess_paragraph__cds_design_system_text_section().
+ *
+ * Adds news variables useful for preparing the heading element for a text
+ * section Paragraph.
+ */
+function cds_design_system_preprocess_paragraph__cds_design_system_text_section(&$variables) {
+
+  $variables['heading_text']  = '';
+  $variables['heading_level'] = '';
+  $variables['heading_id']    = '';
+
+  $paragraph = $variables['paragraph'];
+  if ($paragraph->get('localgov_header_text')->isEmpty()) {
+    return;
+  }
+
+  $heading_text  = $paragraph->get('localgov_header_text')->value;
+  $heading_level = $paragraph->get('localgov_heading_level')->value;
+  $heading_id    = Html::getUniqueId($heading_text);
+
+  $allowed_heading_levels = ['h2', 'h3', 'h4', 'h5', 'h6'];
+  if (in_array($heading_level, $allowed_heading_levels)) {
+    $variables['heading_text']  = $heading_text;
+    $variables['heading_level'] = $heading_level;
+    $variables['heading_id']    = $heading_id;
+  }
+}

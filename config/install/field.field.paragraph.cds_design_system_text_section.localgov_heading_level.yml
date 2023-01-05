@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_heading_level
+    - paragraphs.paragraphs_type.cds_design_system_text_section
+  module:
+    - options
+id: paragraph.cds_design_system_text_section.localgov_heading_level
+field_name: localgov_heading_level
+entity_type: paragraph
+bundle: cds_design_system_text_section
+label: 'Heading level'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

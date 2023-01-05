@@ -1,0 +1,12 @@
+{
+  "name": "localgovdrupal/cds_design_system",
+  "description": "Design system (AKA Style guide) page configuration.",
+  "type": "drupal-module",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "drupal/core": "~8 || ~9 || ~10",
+    "drupal/prism": "^1.0",
+    "drupal/block_class": "^2.0",
+    "localgovdrupal/localgov_paragraphs": "^2.2"
+  }
+}

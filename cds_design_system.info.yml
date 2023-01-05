@@ -1,0 +1,11 @@
+name: Design and content guidelines
+description: Design and content guidelines (AKA Style guide) configuration.
+type: module
+core_version_requirement: ^8.8 || ^9 || ^10
+
+dependencies:
+  - drupal:taxonomy
+  - localgov_paragraphs:localgov_paragraphs
+  - localgov_paragraphs:localgov_subsites_paragraphs
+  - block_class:block_class
+  - prism:prism

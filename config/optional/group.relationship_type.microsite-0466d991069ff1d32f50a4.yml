@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.microsite
+    - taxonomy.vocabulary.cds_design_system_platforms
+  module:
+    - group_term
+    - taxonomy
+id: microsite-0466d991069ff1d32f50a4
+group_type: microsite
+content_plugin: 'group_term:cds_design_system_platforms'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

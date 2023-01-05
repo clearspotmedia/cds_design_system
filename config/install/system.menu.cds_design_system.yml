@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cds_design_system
+label: 'Design and content guidelines'
+description: 'Design and content guidelines pages'
+locked: false

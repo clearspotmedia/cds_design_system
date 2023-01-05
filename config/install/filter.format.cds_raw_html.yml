@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - prism
+name: 'Raw HTML'
+format: cds_raw_html
+weight: 6
+filters:
+  prism_filter:
+    id: prism_filter
+    provider: prism
+    status: true
+    weight: 0
+    settings: {  }
