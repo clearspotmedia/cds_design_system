@@ -35,6 +35,16 @@ function cds_design_system_install($is_syncing) {
       'view group_node:cds_design_system entity',
       'view group_node:cds_design_system relationship',
       'view unpublished group_node:cds_design_system entity',
+      'create group_term:cds_design_system_platforms entity',
+      'delete any group_term:cds_design_system_platforms entity',
+      'delete any group_term:cds_design_system_platforms relationship',
+      'delete own group_term:cds_design_system_platforms relationship',
+      'update any group_term:cds_design_system_platforms entity',
+      'update any group_term:cds_design_system_platforms relationship',
+      'update own group_term:cds_design_system_platforms relationship',
+      'view any unpublished group_term:cds_design_system_platforms entity',
+      'view group_term:cds_design_system_platforms entity',
+      'view group_term:cds_design_system_platforms relationship',
     ],
     'microsite-member' => [
       'create group_node:cds_design_system entity',
@@ -48,12 +58,19 @@ function cds_design_system_install($is_syncing) {
       'update own group_node:cds_design_system relationship',
       'view group_node:cds_design_system entity',
       'view unpublished group_node:cds_design_system entity',
+      'create group_term:cds_design_system_platforms entity',
+      'delete any group_term:cds_design_system_platforms entity',
+      'update any group_term:cds_design_system_platforms entity',
+      'view any unpublished group_term:cds_design_system_platforms entity',
+      'view group_term:cds_design_system_platforms entity',
     ],
     'microsite-outsider' => [
       'view group_node:cds_design_system entity',
+      'view group_term:cds_design_system_platforms entity',
     ],
     'microsite-anonymous' => [
       'view group_node:cds_design_system entity',
+      'view group_term:cds_design_system_platforms entity',
     ],
   ];
 
