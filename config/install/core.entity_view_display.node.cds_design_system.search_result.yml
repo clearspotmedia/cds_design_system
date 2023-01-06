@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.cds_design_system.body
+    - field.field.node.cds_design_system.cds_ds_taxonomy_terms
+    - field.field.node.cds_design_system.cds_more_page_sections
+    - node.type.cds_design_system
+  module:
+    - user
+id: node.cds_design_system.search_result
+targetEntityType: node
+bundle: cds_design_system
+mode: search_result
+content:
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  cds_ds_taxonomy_terms: true
+  cds_more_page_sections: true
+  links: true
