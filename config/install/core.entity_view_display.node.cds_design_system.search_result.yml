@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.search_result
     - field.field.node.cds_design_system.body
     - field.field.node.cds_design_system.cds_ds_taxonomy_terms
+    - field.field.node.cds_design_system.cds_page_sections
     - field.field.node.cds_design_system.cds_more_page_sections
     - node.type.cds_design_system
   module:
@@ -22,5 +23,6 @@ content:
 hidden:
   body: true
   cds_ds_taxonomy_terms: true
+  cds_page_sections: true
   cds_more_page_sections: true
   links: true

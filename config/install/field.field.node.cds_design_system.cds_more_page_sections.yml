@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.cds_more_page_sections
+    - field.storage.node.cds_page_sections
     - node.type.cds_design_system
     - paragraphs.paragraphs_type.cds_design_system_text_section
     - paragraphs.paragraphs_type.localgov_contact

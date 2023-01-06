@@ -96,7 +96,7 @@ function cds_design_system_preprocess_paragraph__cds_design_system_text_section(
   $allowed_heading_levels = ['h2', 'h3', 'h4', 'h5', 'h6'];
   if (in_array($heading_level, $allowed_heading_levels)) {
     $variables['heading_text']  = $heading_text;
-    $variables['heading_level'] = $heading_level;
+    $variables['heading_level'] = $heading_level ?: 'h2';
     $variables['heading_id']    = $heading_id;
   }
 }

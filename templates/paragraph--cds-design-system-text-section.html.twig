@@ -55,11 +55,12 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {#{ heading }#}
+      {% if heading_text %}
       <{{ heading_level }} id="{{ heading_id }}">
         <a class="toc-anchor" title="Permalink to this headline" href="#{{ heading_id }}"></a>
         {{ heading_text }}
       </{{ heading_level }}>
+      {% endif %}
 
       {{ content.localgov_text }}
     {% endblock %}

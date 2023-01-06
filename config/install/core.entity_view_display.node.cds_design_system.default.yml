@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.cds_design_system.body
     - field.field.node.cds_design_system.cds_ds_taxonomy_terms
+    - field.field.node.cds_design_system.cds_page_sections
     - field.field.node.cds_design_system.cds_more_page_sections
     - node.type.cds_design_system
   module:
@@ -30,7 +31,7 @@ content:
     third_party_settings: {  }
     weight: 99
     region: content
-  cds_more_page_sections:
+  cds_page_sections:
     type: entity_reference_revisions_entity_view
     label: hidden
     settings:
@@ -38,6 +39,15 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 102
+    region: content
+  cds_more_page_sections:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
     region: content
   links:
     settings: {  }

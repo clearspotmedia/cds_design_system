@@ -21,12 +21,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  localgov_heading_level:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   localgov_text:
     type: text_textarea
     weight: 4
@@ -38,3 +32,4 @@ content:
 hidden:
   created: true
   status: true
+  localgov_heading_level: true
