@@ -25,5 +25,8 @@ This module provides a content type called **Design and content guidelines**.  T
 ### LocalGov Microsites compatibility
 This module is ready for use within LocalGov Microsites.  
 
+#### Design system menu
+This menu is not automatically available in every microsite.  It has to be manually **added** from a microsite dashboard's *Menus* tab.
+
 ## Notes
 - **Restrict** the `Raw HTML` text format to trusted Drupal user roles only.  This text format can be used to introduce malicious content such as Cross-site scripting markup.
