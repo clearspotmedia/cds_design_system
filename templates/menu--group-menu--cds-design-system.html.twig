@@ -18,10 +18,6 @@
  *   - in_active_trail: TRUE if the link is in the active trail.
  *
  * Sample output:
- * <div class="navbar-controls">
- *   <a class="navbar-brand" href="#">Design system</a>
- *   <button class="navbar-toggler collapsed" ...><span class="navbar-toggler-icon"></span></button>
- * </div>
  * <ul id="design-system--2" class="navbar-nav has-active-trail">
  *   <li class="nav-item is-not-active-trail"><a class="nav-link">Foo</a></li>
  *   <li class="nav-item is-active-trail">
@@ -58,13 +54,6 @@
         {% set navbar_brand_title = item.title %}
         {% set navbar_brand_path = item.url %}
       {% endfor %}
-
-      <div class="navbar-controls">
-        <a class="navbar-brand" href="{{ navbar_brand_path }}">{{ navbar_brand_title|t }}</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#{{ attributes.id }}" aria-controls="#{{ attributes.id }}" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
 
       <ul{{ attributes.addClass(top_ul_class) }}>
     {% else %}
