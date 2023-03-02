@@ -88,10 +88,7 @@
         %}
         {{ link(item.title, item.url, link_attr) }}
 
-        {% if menu_level == 0 and item.below and item.in_active_trail %}
-          {# Only expand a top level menu item when it is in the active trail. #}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% elseif menu_level > 0 and item.below %}
+        {% if item.below  %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
       </li>
