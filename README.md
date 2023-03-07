@@ -30,3 +30,7 @@ This menu is not automatically available in every microsite.  It has to be manua
 
 ## Notes
 - **Restrict** the `Raw HTML` text format to trusted Drupal user roles only.  This text format can be used to introduce malicious content such as Cross-site scripting markup.
+
+## Theming
+### Page template variables
+- parent_root_label: Label of the root page in the active trail.

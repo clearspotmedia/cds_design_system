@@ -100,3 +100,13 @@ function cds_design_system_preprocess_paragraph__cds_design_system_text_section(
     $variables['heading_id']    = $heading_id;
   }
 }
+
+/**
+ * Implements hook_preprocess_page() for hook_preprocess_page__cds_design_system().
+ *
+ * Adds a root parent page variable.
+ */
+function cds_design_system_preprocess_page__cds_design_system(&$variables) {
+
+  $variables['parent_root_label'] = Drupal::service('token')->replace('[node:menu-link:root]', ['node' => $variables['node']]);
+}
