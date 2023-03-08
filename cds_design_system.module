@@ -102,11 +102,21 @@ function cds_design_system_preprocess_paragraph__cds_design_system_text_section(
 }
 
 /**
- * Implements hook_preprocess_page() for hook_preprocess_page__cds_design_system().
+ * Implements hook_preprocess_localgov_page_header_block().
  *
- * Adds a root parent page variable.
+ * Adds the following variables:
+ * - parent_root_label: Label of the root page in the active menu trail.
  */
-function cds_design_system_preprocess_page__cds_design_system(&$variables) {
+function cds_design_system_preprocess_localgov_page_header_block(&$variables) {
 
-  $variables['parent_root_label'] = Drupal::service('token')->replace('[node:menu-link:root]', ['node' => $variables['node']]);
+  $current_node = Drupal::service('current_route_match')->getParameter('node');
+  if (empty($current_node)) {
+    return;
+  }
+
+  $variables['parent_root_label'] = Drupal::service('token')->replace(
+    '[node:menu-link:root]',
+    ['node' => $current_node],
+    ['clear' => TRUE]
+  );
 }
