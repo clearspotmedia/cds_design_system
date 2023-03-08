@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: cds_design_system_terms
+label: 'Design and content guidelines terms'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'taxonomy/term/[term:name]'
+selection_criteria:
+  1bcf1aa3-56ce-41c1-b406-829e815df956:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 1bcf1aa3-56ce-41c1-b406-829e815df956
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      cds_design_system_platforms: cds_design_system_platforms
+selection_logic: and
+weight: -5
+relationships: {  }
