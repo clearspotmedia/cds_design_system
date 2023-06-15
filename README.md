@@ -25,15 +25,20 @@ The front end interface closely replicates the GDS design system navigation stru
 
 Page sections added by editors (see content type above) are rendered as h2 titles and text in the content area. Each title is also automatically presented as an anchor link within the page sidebar 'secondary navigation' under the current highlighted page.
 
+### Platform taxonomy
+
+Add your own taxonomy and choose which to show on design system pages, for example to indicate platform support for components or styles.
+
 ### Summary of features with both theme and module installed:
 
-designed to be installed as a LocalGov microsite or a standard LocalGov Drupal site installation (Standard installation to be tested)
-search the design system with LocalGov search
-new paragraph type for adding headed sections and content in design system pages
-automatic contents menu based on page section headings
-taxonomy to show platform support for components
-responsive primary and secondary navigations
-simple white labelled sub theme that uses LocalGov Base as its base theme
+* designed to be installed as a LocalGov microsite or a standard LocalGov Drupal site installation (Standard installation to be tested)
+* search the design system with LocalGov search
+* new paragraph type for adding headed sections and content in design system pages
+* automatic contents menu based on page section headings
+* taxonomy to show platform support for components
+* responsive primary and secondary navigations
+* simple white labelled sub theme that uses LocalGov Base as its base theme
+
 
 
 ## Installation steps
