@@ -3,7 +3,7 @@ Module for a Design System in LocalGov Drupal
 
 This module is designed to be used in partnership with the Design System Theme.
 
-**Read aout the Design System Theme before using this module!**
+**Read about the Design System Theme before using this module!**
 [https://github.com/clearspotmedia/cds_design_system](https://github.com/clearspotmedia/localgov_design_system/)
 
 ## Features
