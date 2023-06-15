@@ -1,10 +1,40 @@
 # Design System module for LocalGov sites
+Module for a Design System in LocalGov Drupal
+
+This module is designed to be used in partnership with the Design System Theme.
+
+**Read aout the Design System Theme before using this module!**
+[https://github.com/clearspotmedia/cds_design_system](https://github.com/clearspotmedia/localgov_design_system/)
 
 ## Features
-This module provides a content type called **Design and content guidelines**.  The body field of this content type defaults to the `Raw HTML` text format.  This makes it easy to enter pure HTML markup.  Such markup is helpful while documenting the Design system (AKA Style guide) of a site.  Also provided:
-- A separate menu.
-- Two menu blocks.  These should be placed in the **breadcrumb** and **first sidebar** regions so that the menu appears before the page content.
-- URL alias pattern.
+
+### Content type
+This module provides a content type called **Design and content guidelines**.  
+This content type offers a more structured editing experience for design system authors and an improved front end interface for Design System pages including responsive navigation.
+
+Design system pages now contain a headline, summary and body area, as well as a new 'Page section' paragraph type that enables editors to organise longer page content into headed sections.
+
+### Primary and secondary navigation
+
+To structure content you will create and assign 'parent' and 'child' pages. 'Parents' act as sections while 'children' are pages within sections.
+These sections and child pages are output into well considered responsive menus for navigation.
+
+The front end interface closely replicates the GDS design system navigation structure. https://design-system.service.gov.uk/
+
+### Auto contents menu
+
+Page sections added by editors (see content type above) are rendered as h2 titles and text in the content area. Each title is also automatically presented as an anchor link within the page sidebar 'secondary navigation' under the current highlighted page.
+
+### Summary of features with both theme and module installed:
+
+designed to be installed as a LocalGov microsite or a standard LocalGov Drupal site installation (Standard installation to be tested)
+search the design system with LocalGov search
+new paragraph type for adding headed sections and content in design system pages
+automatic contents menu based on page section headings
+taxonomy to show platform support for components
+responsive primary and secondary navigations
+simple white labelled sub theme that uses LocalGov Base as its base theme
+
 
 ## Installation steps
 1. Download this module and place it inside the `modules/custom/` directory of your site.
