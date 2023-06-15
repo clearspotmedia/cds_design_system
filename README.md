@@ -1,4 +1,4 @@
-# Design system
+# Design System module for LocalGov sites
 
 ## Features
 This module provides a content type called **Design and content guidelines**.  The body field of this content type defaults to the `Raw HTML` text format.  This makes it easy to enter pure HTML markup.  Such markup is helpful while documenting the Design system (AKA Style guide) of a site.  Also provided:
