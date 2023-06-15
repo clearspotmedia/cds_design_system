@@ -29,6 +29,10 @@ Page sections added by editors (see content type above) are rendered as h2 title
 
 Add your own taxonomy and choose which to show on design system pages, for example to indicate platform support for components or styles.
 
+### Search
+
+Search design system pages using LocalGov Search module.
+
 ### Summary of features with both theme and module installed:
 
 * designed to be installed as a LocalGov microsite or a standard LocalGov Drupal site installation (Standard installation to be tested)
@@ -38,7 +42,6 @@ Add your own taxonomy and choose which to show on design system pages, for examp
 * taxonomy to show platform support for components
 * responsive primary and secondary navigations
 * simple white labelled sub theme that uses LocalGov Base as its base theme
-
 
 
 ## Installation steps
