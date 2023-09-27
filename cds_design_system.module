@@ -8,6 +8,10 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Access\AccessResultAllowed;
+use Drupal\Core\Access\AccessResultForbidden;
+use Drupal\Core\Access\AccessResultNeutral;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_theme().
@@ -25,6 +29,50 @@ function cds_design_system_theme() {
       'base hook' => 'paragraph',
     ],
   ];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_access() for hook_filter_format_access().
+ *
+ * Restricts the cds_ds_raw_html text format to the cds_design_system content
+ * type.
+ */
+function cds_design_system_filter_format_access(EntityInterface $filter_format, string $op) {
+
+  if ($filter_format->id() !== "cds_ds_raw_html" || $op !== 'use') {
+    return new AccessResultNeutral();
+  }
+
+  $route        = Drupal::service('current_route_match');
+  $node         = $route->getParameter('node');
+  $node_type    = $route->getParameter('node_type');
+  $group_plugin = $route->getParameter('plugin_id');
+
+  $is_not_node_page = (is_null($node) && is_null($node_type));
+  $is_group_ds_node_add_page = $group_plugin === 'group_node:cds_design_system';
+  $is_not_group_ds_node_add_page = !$is_group_ds_node_add_page;
+
+  if ($is_not_node_page && $is_not_group_ds_node_add_page) {
+    return new AccessResultForbidden();
+  }
+
+  $node_bundle = '';
+  if ($node) {
+    $node_bundle = $node->bundle();
+  }
+  elseif ($node_type) {
+    $node_bundle = $node_type->id();
+  }
+  elseif ($is_group_ds_node_add_page) {
+    $node_bundle = 'cds_design_system';
+  }
+
+  if ($node_bundle === 'cds_design_system') {
+    return new AccessResultAllowed();
+  }
+  else {
+    return new AccessResultForbidden();
+  }
 }
 
 /**
