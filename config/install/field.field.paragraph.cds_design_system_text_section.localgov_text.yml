@@ -17,7 +17,7 @@ translatable: true
 default_value:
   -
     value: '<span class="visually-hidden">Placeholder text</span>'
-    format: cds_raw_html
+    format: cds_ds_raw_html
 default_value_callback: ''
 settings: {  }
 field_type: text_long
