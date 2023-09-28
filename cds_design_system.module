@@ -68,7 +68,7 @@ function cds_design_system_filter_format_access(EntityInterface $filter_format, 
   }
 
   if ($node_bundle === 'cds_design_system') {
-    return new AccessResultAllowed();
+    return new AccessResultNeutral();
   }
   else {
     return new AccessResultForbidden();
