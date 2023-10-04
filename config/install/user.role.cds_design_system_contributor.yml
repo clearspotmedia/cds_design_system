@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.cds_raw_html
+    - filter.format.cds_ds_raw_html
     - node.type.cds_design_system
   module:
     - filter
@@ -17,5 +17,5 @@ permissions:
   - 'edit any cds_design_system content'
   - 'edit own cds_design_system content'
   - 'revert cds_design_system revisions'
-  - 'use text format cds_raw_html'
+  - 'use text format cds_ds_raw_html'
   - 'view cds_design_system revisions'

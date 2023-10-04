@@ -11,14 +11,14 @@ field_name: body
 entity_type: node
 bundle: cds_design_system
 label: Body
-description: "Enter HTML markup in this field.  Use the *Raw HTML* text format if possible.  Code sample should be enclosed by the [prism:LANG] ... [/prism:LANG] tag where LANG could be any of \"css\", \"sass\", \"scss\", \"markup\", \"javascript\", \"yaml\", and \"twig\".  Example:<br />\r\n&lt;h2&gt;I am a header&lt;/h2&gt;<br />\r\n&lt;p&gt;Some body copy...&lt;/p&gt;<br />\r\n[prism:css]<br />\r\n.body-copy {<br />\r\n&nbsp; max-width: 75%;<br />\r\n}<br />\r\n[/prism:css]<br />\r\n&lt;p&gt;More body copy...&lt;/p&gt;"
+description: "Enter HTML markup in this field.  Use the *Raw HTML for Design system* text format if possible.  Code sample should be enclosed by the [prism:LANG] ... [/prism:LANG] tag where LANG could be any of \"css\", \"sass\", \"scss\", \"markup\", \"javascript\", \"yaml\", and \"twig\".  Example:<br />\r\n&lt;h2&gt;I am a header&lt;/h2&gt;<br />\r\n&lt;p&gt;Some body copy...&lt;/p&gt;<br />\r\n[prism:css]<br />\r\n.body-copy {<br />\r\n&nbsp; max-width: 75%;<br />\r\n}<br />\r\n[/prism:css]<br />\r\n&lt;p&gt;More body copy...&lt;/p&gt;"
 required: false
 translatable: true
 default_value:
   -
     summary: ''
     value: '<span class="visually-hidden">Placeholder text</span>'
-    format: cds_raw_html
+    format: cds_ds_raw_html
 default_value_callback: ''
 settings:
   display_summary: true

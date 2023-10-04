@@ -57,7 +57,7 @@ Search design system pages using LocalGov Search module.
   ```
 
 ## Usage
-- Create *Design and content guideline* pages like any other page.  The default text format for the body field is `Raw HTML` which allows you to enter any HTML markup.  Other text formats may be available and those can be used as well *if necessary*.
+- Create *Design and content guideline* pages like any other page.  The default text format for the body field is `Raw HTML for Design system` which allows you to enter any HTML markup.  Other text formats may be available and those can be used as well *if necessary*.
 - By default, new pages are not placed in the Design system menu.  To do so, look for the `Menu settings` accordion within the node edit page's sidebar.  Once found, expand the accordion and tick the `Provide a menu link` checkbox.
 
 ### LocalGov Microsites compatibility
@@ -67,7 +67,7 @@ This module is ready for use within LocalGov Microsites.
 This menu is not automatically available in every microsite.  It has to be manually **added** from a microsite dashboard's *Menus* tab.
 
 ## Notes
-- **Restrict** the `Raw HTML` text format to trusted Drupal user roles only.  This text format can be used to introduce malicious content such as Cross-site scripting markup.
+- **Restrict** the `Raw HTML for Design system` text format to trusted Drupal user roles only.  This text format is only available in Design system pages.  But it can still be used to introduce malicious content such as Cross-site scripting markup.
 
 ## Theming
 ### localgov_page_header_block template variables
