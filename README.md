@@ -47,7 +47,7 @@ Search design system pages using LocalGov Search module.
 ## Installation steps
 1. Download this module and place it inside the `modules/custom/` directory of your site.
 2. *Unless* using the localgov_design_system theme, edit the `config/optional/block.block.design_system_menu_primary.yml` and `config/optional/block.block.design_system_menu_secondary.yml` files of this module and replace `localgov_design_system` with the machine id of the Drupal theme in use.  For example, if you are using the Bartik theme, replace `localgov_design_system` with `bartik`.  Depending on the theme regions available, you may have to update the `region` value as well.
-3. Now try the following commands:
+3. Now try the following commands within your site folder:
 
   ```
   $ composer require prismjs/prism
