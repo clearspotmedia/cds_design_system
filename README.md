@@ -56,6 +56,15 @@ Search design system pages using LocalGov Search module.
   $ drush --yes pm:enable cds_design_system
   ```
 
+
+You must install this module after the [Design System Theme](https://github.com/clearspotmedia/cds_design_system)
+
+### Follow the intsallation steps in the wiki
+[https://github.com/clearspotmedia/localgov_design_system/wiki](https://github.com/clearspotmedia/localgov_design_system/wiki)
+
+### Demo
+[Design system child page with section headings](https://design-system.croydon.gov.uk/components/checkboxes)
+
 ## Usage
 - Create *Design and content guideline* pages like any other page.  The default text format for the body field is `Raw HTML for Design system` which allows you to enter any HTML markup.  Other text formats may be available and those can be used as well *if necessary*.
 - By default, new pages are not placed in the Design system menu.  To do so, look for the `Menu settings` accordion within the node edit page's sidebar.  Once found, expand the accordion and tick the `Provide a menu link` checkbox.
