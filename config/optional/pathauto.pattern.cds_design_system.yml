@@ -9,7 +9,7 @@ type: 'canonical_entities:node'
 pattern: '[node:menu-link:parents:join-path]/[node:title]'
 selection_criteria:
   e5e7230f-9f07-4108-b829-34cd3a139cfd:
-    id: node_type
+    id: 'entity_bundle:node'
     bundles:
       cds_design_system: cds_design_system
     negate: false
